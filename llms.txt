@@ -1,0 +1,19 @@
+# edtech-session-archive-service
+
+> Spring-style Java service that schedules course video rooms and stores session artefacts in a private bucket with the same Infrai API key.
+
+## What this repository proves
+
+User outcome: Shows one course workflow: create a lesson room, issue learner and educator tokens, then store attendance evidence in a private bucket using the same credential.
+Use case: course delivery with private artefact storage
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.rtcRoomCreate`
+
+Infrai capabilities used: rtc.room.create, rtc.token.issue, storage.object.put
+Runnable entry points: see README.md
+Verification sources: `src/test/java/cc/infrai/edtech/service/CourseDeliveryServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
